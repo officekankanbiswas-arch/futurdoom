@@ -1,0 +1,968 @@
+.find-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.find-page {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    margin-top: 20px;
+    background: #f8fafc;
+    color: #1d2a40;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+
+/* =========================================
+   LEFT SIDEBAR
+========================================= */
+
+.profile-sidebar {
+    width: 300px;
+    height: auto;
+    background: #ffffff;
+    border-right: 1px solid #e7edf5;
+    position: relative;
+}
+
+
+/* Cover */
+
+.profile-cover {
+    height: 120px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(135deg,
+            #172d8d,
+            #2862dc);
+}
+
+.profile-cover::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.06) 1px,
+            transparent 1px);
+
+    background-size: 40px 40px;
+}
+
+.cover-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.circle-one {
+    width: 110px;
+    height: 110px;
+
+    right: -5px;
+    top: 25px;
+}
+
+.circle-two {
+    width: 100px;
+    height: 100px;
+
+    right: 40px;
+    top: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* Profile image */
+
+.profile-image-wrapper {
+    position: absolute;
+
+    top: 82px;
+    left: 20px;
+
+    z-index: 5;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    border: 5px solid #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg,
+            #d9dce2,
+            #8c929b);
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.profile-online {
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    right: 1px;
+    bottom: 7px;
+
+    border-radius: 50%;
+
+    background: #20c879;
+
+    border: 3px solid #ffffff;
+}
+
+
+/* Profile content */
+
+.profile-content {
+    padding: 60px 20px 20px;
+}
+
+.profile-content h2 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #1c2940;
+}
+
+.profile-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    color: #3475df;
+
+    font-size: 12px;
+}
+
+.profile-role {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    background: #5265ff;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.profile-divider {
+    height: 1px;
+
+    margin: 15px 0;
+
+    background: #edf1f6;
+}
+
+
+/* Social */
+
+.profile-socials {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.profile-socials a {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #edf1f5;
+    border-radius: 6px;
+
+    background: #f9fbfd;
+
+    color: #4b607b;
+
+    text-decoration: none;
+}
+
+
+/* About */
+
+.profile-about {
+    padding: 13px;
+
+    border: 1px solid #e4eaf2;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+}
+
+.profile-about span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #91a3bc;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.profile-about p {
+    margin: 0;
+
+    color: #657b99;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* Profile buttons */
+
+.profile-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.profile-action {
+    height: 38px;
+
+    border: none;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.profile-action b {
+    padding: 2px 6px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    font-size: 10px;
+}
+
+.profile-action.interested {
+    background: linear-gradient(135deg,
+            #ff3980,
+            #ff4e91);
+}
+
+.profile-action.interesting {
+    background: linear-gradient(135deg,
+            #2772ee,
+            #2750bd);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.find-main {
+    min-width: 0;
+    padding: 0 20px;
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.find-hero {
+    height: 130px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 25px 24px;
+
+    border-radius: 10px 10px 0 0;
+
+    background:
+        linear-gradient(135deg,
+            #172d8d,
+            #2865e4);
+
+    color: #ffffff;
+}
+
+.find-hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px);
+
+    background-size: 42px 42px;
+}
+
+.hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-decoration-one {
+    width: 115px;
+    height: 115px;
+
+    right: 25px;
+    top: 20px;
+}
+
+.hero-decoration-two {
+    width: 90px;
+    height: 90px;
+
+    right: 80px;
+    top: 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.discover-label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 7px;
+
+    color: #b8c8ef;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.discover-label span {
+    width: 16px;
+    height: 2px;
+
+    background: #89a9ee;
+}
+
+.find-hero h1 {
+    position: relative;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.find-hero h1 svg {
+    color: #a6c5ff;
+}
+
+.find-hero p {
+    position: relative;
+
+    margin: 6px 0 0;
+
+    color: #a9c0ed;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.find-content {
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7edf4;
+    border-top: none;
+
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Search */
+
+.people-search {
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 13px;
+
+    border: 1px solid #e8edf3;
+    border-radius: 11px;
+
+    background: #f7f9fc;
+
+    color: #94a7c0;
+}
+
+.people-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #405574;
+
+    font-size: 14px;
+}
+
+.people-search input::placeholder {
+    color: #91a4bd;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.people-tabs {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.people-tabs button {
+    height: 34px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f7f9fb;
+
+    color: #536985;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.people-tabs button:hover {
+    background: #edf3ff;
+}
+
+.people-tabs button.active {
+    background: #307bf0;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 12px rgba(48, 123, 240, 0.2);
+}
+
+
+/* =========================================
+   PEOPLE HEADING
+========================================= */
+
+.people-heading {
+    height: 41px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e9eef4;
+}
+
+.people-heading span {
+    color: #2472e5;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.people-heading small {
+    color: #8497b1;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   PEOPLE ROW
+========================================= */
+
+.person-row {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px solid #edf1f5;
+
+    transition: background 0.2s ease;
+}
+
+.person-row:hover {
+    background: #fbfcff;
+}
+
+
+/* Avatar */
+
+.person-avatar {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 10px rgba(50, 70, 100, 0.12);
+}
+
+.person-avatar.pink {
+    background: #ed6292;
+}
+
+.person-avatar.blue {
+    background: #5588ee;
+}
+
+.person-avatar.green {
+    background: #18bd8a;
+}
+
+.person-avatar.purple {
+    background: #c05be2;
+}
+
+.person-avatar.orange {
+    background: #ff9800;
+}
+
+.person-status {
+    width: 11px;
+    height: 11px;
+
+    position: absolute;
+
+    right: -1px;
+    bottom: -1px;
+
+    border-radius: 50%;
+
+    border: 2px solid #ffffff;
+}
+
+.person-status.online {
+    background: #17c879;
+}
+
+.person-status.offline {
+    background: #aeb8c6;
+}
+
+
+/* Person information */
+
+.person-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.person-name-row {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.person-name-row h3 {
+    margin: 0;
+
+    color: #1d2b40;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.status-badge {
+    padding: 2px 7px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+}
+
+.online-badge {
+    color: #14a96a;
+
+    background: #e7faef;
+}
+
+.offline-badge {
+    color: #8d9aaa;
+
+    background: #f2f4f6;
+}
+
+.interest-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+}
+
+.interested-badge {
+    color: #f03e91;
+
+    background: #fff0f7;
+
+    border: 1px solid #ffc7e2;
+}
+
+.interesting-badge {
+    color: #ef9300;
+
+    background: #fff9e8;
+
+    border: 1px solid #ffd86b;
+}
+
+.person-location {
+    margin-top: 4px;
+
+    color: #6d84a3;
+
+    font-size: 11px;
+}
+
+.person-role {
+    margin-top: 4px;
+
+    color: #58718f;
+
+    font-size: 11px;
+}
+
+.last-active {
+    margin-top: 3px;
+
+    color: #8ca0ba;
+
+    font-size: 9px;
+}
+
+
+/* Arrow */
+
+.person-arrow {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #c1cfdf;
+
+    cursor: pointer;
+}
+
+.person-arrow:hover {
+    color: #3477df;
+}
+
+
+/* Bottom */
+
+.find-bottom {
+    padding: 20px;
+
+    text-align: center;
+
+    color: #b0bdce;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+.find-main {
+    animation: findPageEnter 0.55s ease-out both;
+}
+
+.profile-sidebar {
+    animation: sidebarEnter 0.55s ease-out both;
+}
+
+.person-row {
+    animation: personEnter 0.45s ease-out both;
+}
+
+.person-row:nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.person-row:nth-child(2) {
+    animation-delay: 0.14s;
+}
+
+.person-row:nth-child(3) {
+    animation-delay: 0.20s;
+}
+
+.person-row:nth-child(4) {
+    animation-delay: 0.26s;
+}
+
+.person-row:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+@keyframes findPageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sidebarEnter {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes personEnter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+    .find-page {
+        grid-template-columns: 240px minmax(0, 1fr);
+    }
+
+    .profile-sidebar {
+        width: 240px;
+    }
+
+    .find-main {
+        padding: 12px;
+    }
+
+    .find-content {
+        padding: 18px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .find-page {
+        display: block;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .profile-cover {
+        height: 100px;
+    }
+
+    .profile-image-wrapper {
+        top: 65px;
+    }
+
+    .profile-content {
+        padding-top: 55px;
+    }
+
+    .find-main {
+        padding: 0;
+    }
+
+    .find-hero {
+        border-radius: 0;
+    }
+
+    .find-content {
+        border-radius: 0;
+    }
+
+    .people-tabs button {
+        font-size: 10px;
+    }
+
+    .person-row {
+        min-height: 85px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .profile-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .people-tabs {
+        gap: 5px;
+    }
+
+    .people-tabs button {
+        gap: 4px;
+    }
+
+    .person-role {
+        max-width: 250px;
+    }
+
+    .interest-badge {
+        font-size: 9px;
+    }
+}
